@@ -142,4 +142,4 @@ class DeBERTa(torch.nn.Module):
     missing_keys = []
     unexpected_keys = []
     error_msgs = []
-    self._load_from_state_dict(state, prefix = prefix, local_metadata=None, strict=True, missing_keys=missing_keys, unexpected_keys=unexpected_keys, error_msgs=error_msgs)
+    self._load_from_state_dict(state, prefix = prefix, local_metadata={}, strict=True, missing_keys=missing_keys, unexpected_keys=unexpected_keys, error_msgs=error_msgs)
