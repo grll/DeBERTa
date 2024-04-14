@@ -66,7 +66,7 @@ class SPMTokenizer:
   def convert_ids_to_tokens(self, ids):
     tokens = []
     for i in ids:
-      tokens.append(self.ids_to_tokens[i])
+      tokens.append(self.id_to_tokens[i])
     return tokens
 
   def decode(self, tokens, start=-1, end=-1, raw_text=None):
@@ -125,7 +125,7 @@ class SPMTokenizer:
       return '[MASK]'
 
   def sym(self, id):
-    return self.ids_to_tokens[id]
+    return self.id_to_tokens[id]
 
   def id(self, sym):
     return self.vocab[sym] if sym in self.vocab else 1
